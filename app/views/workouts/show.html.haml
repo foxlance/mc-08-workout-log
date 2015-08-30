@@ -1,0 +1,6 @@
+%h1= @workout.workout
+
+%div.btn-group
+  = link_to "Back", workouts_path, class: "btn btn-default"
+  = link_to "Edit", edit_workout_path, class: "btn btn-default"
+  = link_to "Destroy", workout_path, method: :delete, class: "btn btn-default"

@@ -1,0 +1,8 @@
+%div.row
+  = simple_form_for(@workout, html: {class: "form-horizontal"}) do |f|
+    = f.input :workout, input_html: {class: "form-control"}
+    = f.input :date, input_html: {class: "form-control"}
+    = f.input :mood, input_html: {class: "form-control"}
+    = f.input :length, input_html: {class: "form-control"}
+    %br
+    = f.button :submit, class: "btn btn-default"
