@@ -1,0 +1,8 @@
+.row
+  .col-lg-6
+    = simple_form_for([@workout, @workout.exercise.build]) do |f|
+      = f.input :name, label: "Name", input_html: { class: 'form-control'}
+      = f.input :sets, label: "# of Sets", input_html: { class: 'form-control'}
+      = f.input :reps, label: "# of Repetition", input_html: { class: 'form-control'}
+      %br
+      = f.submit "Submit", class: 'btn btn-default'
