@@ -7,5 +7,15 @@
   = csrf_meta_tags
 
 %body
+  
+  %nav.navbar.navbar-default
+    .container
+      .navbar-brand
+        Workout Log
+      %ul.nav.navbar-nav
+        %li= link_to "Workouts", workouts_path
+      = link_to "New Workout", new_workout_path, class: 'navbar-text navbar-right navbar-link'
+        
+
   %div.container
     = yield

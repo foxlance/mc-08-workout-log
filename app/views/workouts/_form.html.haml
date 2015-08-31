@@ -1,8 +1,7 @@
-%div.row
-  = simple_form_for(@workout, html: {class: "form-horizontal"}) do |f|
-    = f.input :workout, label: "What area did you workout", input_html: {class: "form-control"}
-    = f.input :date, label: "Workout date", input_html: {class: "form-control"}
-    = f.input :mood, label: "What was your mood?", input_html: {class: "form-control"}
-    = f.input :length, label: "How long did you work out?", input_html: {class: "form-control"}
-    %br
-    = f.button :submit, class: "btn btn-default"
+= simple_form_for(@workout, html: {class: "form-horizontal"}) do |f|
+  = f.input :workout, label: "What area did you workout", input_html: {class: "form-control"}
+  = f.input :date, label: "Workout date", input_html: {class: "form-control"}
+  = f.input :mood, label: "What was your mood?", input_html: {class: "form-control"}
+  = f.input :length, label: "How long did you work out?", input_html: {class: "form-control"}
+  %br
+  = f.button :submit, class: "btn btn-default"
