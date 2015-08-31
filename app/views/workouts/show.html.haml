@@ -1,5 +1,9 @@
 .row
   .col-lg-10.col-lg-offset-1
+
+    - if notice
+      .alert.alert-info= notice
+
     %h1= @workout.workout
     %p
       %strong
@@ -24,6 +28,13 @@
     %br
     %h2 Exercises
     
+    - if @workout.exercise.size
+      %ul
+        - @workout.exercise.each do |exercise|
+          %li
+            %strong= exercise.name
+            = " - #{pluralize(exercise.sets, 'Set')} of #{pluralize(exercise.reps, 'repetition')}"
+
     %br
     %br
     %h4 Add Exercise
