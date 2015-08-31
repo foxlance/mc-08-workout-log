@@ -1,0 +1,15 @@
+%h2= workout.workout
+%p
+  %strong
+    Mood: 
+  = workout.mood
+  &nbsp;
+  %strong
+    Duration: 
+  = workout.length
+  &nbsp;
+  %strong
+    Date: 
+  = workout.date.strftime("%A, %D")
+
+= link_to "Checkout", workout_path(workout), class: "btn btn-default"

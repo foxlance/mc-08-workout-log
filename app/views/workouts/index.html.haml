@@ -1,6 +1,5 @@
 .row
 
-  %h1 List of workout here
+  %h1 Recent workouts
   
-  - @workouts.each do |workout|
-    %p= link_to workout.workout, workout_path(workout)
+  = render @workouts
