@@ -1,4 +1,17 @@
 %h1= @workout.workout
+%p
+  %strong
+    Mood: 
+  = @workout.mood
+  &nbsp;
+  %strong
+    Duration: 
+  = @workout.length
+  &nbsp;
+  %strong
+    Date: 
+  = @workout.date
+
 
 %div.btn-group
   = link_to "Back", workouts_path, class: "btn btn-default"
