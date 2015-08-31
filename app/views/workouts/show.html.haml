@@ -28,12 +28,15 @@
     %br
     %h2 Exercises
     
-    - if @workout.exercise.size
+    - if @workout.exercise.size > 0
       %ul
         - @workout.exercise.each do |exercise|
           %li
             %strong= exercise.name
             = " - #{pluralize(exercise.sets, 'Set')} of #{pluralize(exercise.reps, 'repetition')}"
+    
+    - else
+      %p No exercises found. Create one below.
 
     %br
     %br
