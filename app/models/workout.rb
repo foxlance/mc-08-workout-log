@@ -1,6 +1,6 @@
 class Workout < ActiveRecord::Base
 
-  has_may :exercise
+  has_many :exercise
 
   validates :workout, :mood, :length, :date, presence: :true
 
